@@ -18,7 +18,7 @@ this little personal project should not encourage so-called "cheating" or
 
 ## Progress
 
-This manual will likely never reach full completion. [In this file](/TODO) completed
+This manual will likely never reach full completion. [In this file](/TODO.md) completed
 parts and what I am working on are listed.
 
 ## Building the PDF
