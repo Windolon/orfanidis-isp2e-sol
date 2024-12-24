@@ -1,6 +1,6 @@
 %% Packages %%
 
-\usepackage[numbered]{bookmark}
+\usepackage[bookmarks = true, bookmarksnumbered = true]{hyperref}
 \usepackage{microtype}
 
 \usepackage{amsmath, amsfonts}
@@ -12,3 +12,5 @@
 \usepackage[margin = 2.5cm]{geometry}
 
 %% Commands %%
+
+\newcommand{\markeditem}[1]{\pdfbookmark[2]{#1}{#1}\item[#1]}
