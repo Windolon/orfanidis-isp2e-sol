@@ -29,6 +29,13 @@ for both writing and compiling. The default
 arguments to `latexmk` as provided by the extension are used, with
 the exception that `-outdir=../out` for less clutter.
 
+<!-- markdownlint-disable MD026 -->
+## Hey, you got this part wrong!
+
+First and foremost, I thank you for actually looking into the detailed steps.
+You can report any issues over at
+[the issues page](https://github.com/Windolon/orfanidis-isp2e-sol/issues).
+
 ## Credits?
 
 Use this work however you want, I don't care. No credit required.
