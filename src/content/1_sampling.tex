@@ -76,4 +76,44 @@ And to check that $x(nT) = x_a(nT)$:
 	\Rightarrow x(nT) &= x_a(nT)\text{.}
 \end{align*}
 
+
+
+
+
+\markeditem{1.3}
+We first simplify $x(t)$ using the trigonometric identity
+$\sin\theta\sin\varphi = \frac{1}{2}(\cos(\theta-\varphi)-\cos(\theta+\varphi))$.
+\begin{align*}
+	x(t) &= \cos(5\pi t) + 4\sin(2\pi t)\sin(3\pi t) \\
+		 &= \cos(5\pi t) + 2\cos(\pi t) - 2\cos(5\pi t) \\
+		 &= 2\cos(\pi t) - \cos(5\pi t)
+\end{align*}
+Then we know $x(t)$ has frequencies:
+\begin{align*}
+	f_A &= 0.5 \text{ kHz} \\
+	f_B &= 2.5 \text{ kHz}
+\end{align*}
+At $f_s = 3$ kHz, the Nyquist interval is $[-1.5,1.5]$. $f_B$ lies outside of it.
+We have $f_{B,a} = -0.5$ kHz. Then,
+\begin{align*}
+	x_a(t) &= 2\cos(\pi t) - \cos(-\pi t) \\
+		   &= \cos(\pi t)
+\end{align*}
+Two other aliased signals are
+\begin{align*}
+	x_1(t) &= 2\cos(2\pi(0.5+1\cdot 3)t) - \cos(2\pi(2.5+1\cdot 3)t) \\
+		   &= 2\cos(7\pi t) - \cos(11\pi t) \\
+	x_2(t) &= 2\cos(2\pi(0.5+2\cdot 3)t) - \cos(2\pi(2.5+2\cdot 3)t) \\
+		   &= 2\cos(13\pi t) - \cos(17\pi t)
+\end{align*}
+More generally, the class of signals that are aliased with $x(t)$ under
+$f_s = 3$ kHz can be obtained by replacing every frequency $f$ in $x(t)$
+with $f + nf_s$, where $n$ can be any integer.
+\begin{equation*}
+	x_{\text{general}}(t)
+	= 2\cos(2\pi(0.5+3n)t) - \cos(2\pi(2.5+3k)t)
+\end{equation*}
+Notice we used two different indexing variables $n$ and $k$, because
+they can obviously be different and still alias to the same $x(t)$.
+
 \end{itemize}
