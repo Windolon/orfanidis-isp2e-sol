@@ -116,4 +116,45 @@ with $f + nf_s$, where $n$ can be any integer.
 Notice we used two different indexing variables $n$ and $k$, because
 they can obviously be different and still alias to the same $x(t)$.
 
+
+
+
+
+\markeditem{1.4}
+We simplify $x(t)$ using the trigonometric identity
+$\cos\theta\cos\varphi = \frac{1}{2}(\cos(\theta-\varphi)+\cos(\theta+\varphi))$.
+\begin{align*}
+	x(t) &= \cos(8\pi t) + 2\cos(4\pi t)\cos(6\pi t) \\
+		 &= \cos(8\pi t) + \cos(2\pi t) + \cos(10\pi t)
+\end{align*}
+We then have $x(t)$'s list of frequencies:
+\begin{align*}
+	f_A &= 1 \text{ Hz} \\
+	f_B &= 4 \text{ Hz} \\
+	f_C &= 5 \text{ Hz}
+\end{align*}
+Of which, $f_B$ and $f_C$ lies outside of the Nyquist interval
+$[-2.5,2.5]$. Their aliases would be
+\begin{align*}
+	f_{B,a} &= 4 - 5 \\
+			&= -1 \text{ Hz} \\
+	f_{C,a} &= 5 - 5 \\
+			&= 0 \text{ Hz}
+\end{align*}
+Then we have the aliased signal
+\begin{align*}
+	x_a(t) &= \cos(-2\pi t) + \cos(2\pi t) + 1 \\
+		   &= 1 + 2\cos(2\pi t)
+\end{align*}
+
+For $f_s = 9$ Hz, only $f_C$ would be aliased.
+\begin{equation*}
+	f_{C,a} = 5 - 9 = -4 \text{ Hz}
+\end{equation*}
+Then,
+\begin{align*}
+	x_a(t) &= \cos(8\pi t) + \cos(2\pi t) + \cos(-8\pi t) \\
+		   &= \cos(2\pi t) + 2\cos(8\pi t)
+\end{align*}
+
 \end{itemize}
